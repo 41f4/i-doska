@@ -1,0 +1,5 @@
+js_api_key: AIzaSyD7MuoasV5I-fmvCEY2dH6FTN9KgTqwWB0
+geolocation_api_key: AIzaSyAOhgsuTc-QHJAWgMjsWvk-v-237phUxpI
+api_callback:
+  script: js/googleMapsHandler.js
+  func: onGoogleMapsReady
