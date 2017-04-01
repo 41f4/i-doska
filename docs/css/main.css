@@ -1,9 +1,10 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+#map-container-outer {
+    height: 90%;
 }
 
-#map-placeholder {
+#map-container {
     height: 100%;
+    width:100%;
+    top:0;
+    padding:0;
 }

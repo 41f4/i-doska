@@ -8,12 +8,12 @@ function initMap(options) {
                 lng: 43.962387
             }
         };
-    let mapElement = document.getElementById('map-placeholder');
+    let mapElement = document.getElementById('map-container');
     map = new google.maps.Map(mapElement, options);
 }
 
 function errorCallback(err) {
-    console.warn("Error getting current postion: ${err.code} - ${err.message}");
+    console.warn(`Error getting current postion: ${err.code} - ${err.message}`);
     initMap();
 }
 
@@ -42,7 +42,6 @@ function onGoogleMapsReady() {
         catch(e) {
             errorCallback({code: 'N/A', message: e.message})
         }
-
     } else {
         errorCallback({code: 'N/A', message: "Browser doesn't support Geolocation"})
     }
