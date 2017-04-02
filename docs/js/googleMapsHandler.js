@@ -1,4 +1,13 @@
 let map;
+let markers = [];
+
+function makeMarker(point, title) {
+        return new google.maps.Marker({
+          map: map,
+          position: point,
+          title: title
+        });
+}
 
 function initMap(options) {
     options = options || {
@@ -10,6 +19,9 @@ function initMap(options) {
         };
     let mapElement = document.getElementById('map-container');
     map = new google.maps.Map(mapElement, options);
+    for (let i in desks) {
+        markers.push(makeMarker(desks[i].point, desks[i].title));
+    }
 }
 
 function errorCallback(err) {

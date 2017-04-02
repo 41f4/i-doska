@@ -1,0 +1,21 @@
+---
+layout: desk_tiles
+permalink: /tiles/
+---
+<div class="ui very container">
+<div class="ui three stackable cards">
+  {% for desk in site.desks %}
+  <div class="ui fluid card">
+      <div class="ui fluid rounded centered image">
+        <img src="{{ desk.image_url }}">
+      </div>
+        <div class="content">
+
+      <a class="header">{{ desk.title }}</a>
+      <a class="meta">{% for tag in desk.tags %}#{{tag}} {% endfor %}</a>
+      <a class="description">{{ desk.text }}</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+  </div>

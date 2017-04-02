@@ -1,24 +1,14 @@
 ---
-layout: default
+layout: map
 permalink: /
 ---
-<div class="ui borderless menu large">
-  <div class="ui container">
-  <div class="right menu">
-    <a class="item">
-      <i class="globe icon large"></i> Map
-    </a>
-    <a class="item">
-      <i class="grid layout icon large"></i> Browse
-    </a>
-  </div>
-  </div>
-</div>
-<div id="map-container-outer" class="ui raised very container segment">
-    <div id="map-container"></div>
+<div id="map-container-outer">
+  <div id="map-container"></div>
 </div>
 
 
-<script async defer src="{{ site.data.google_maps.api_callback.script}}"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.data.google_maps.js_api_key }}&callback={{ site.data.google_maps.api_callback.func}}"></script>
-
+<script async src="{{ site.data.google_maps.api_callback.script}}"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key={{ site.data.google_maps.js_api_key }}&callback={{ site.data.google_maps.api_callback.func}}"></script>
+<script type="text/javascript">
+  let desks = {{ site.desks | jsonify }};
+</script>

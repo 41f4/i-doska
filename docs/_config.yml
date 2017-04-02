@@ -1,1 +1,4 @@
 title: In Memorium Desk Map
+collections:
+  desks:
+    permalink: /:collection/:name:output_ext
